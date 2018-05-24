@@ -76,7 +76,7 @@ onInputChange = (event) => {
 
 onButtonSubmit = () => {
   this.setState({imageUrl: this.state.input})
-  fetch('https://desolate-meadow-26054.herokuapp.com/imageurl', {
+  fetch('https://secret-basin-61226.herokuapp.com/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -86,7 +86,7 @@ onButtonSubmit = () => {
     .then(response => response.json())
   .then(response => {
     if(response) {
-      fetch('https://desolate-meadow-26054.herokuapp.com/image', {
+      fetch('https://secret-basin-61226.herokuapp.com/image', {
         method: 'put',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
